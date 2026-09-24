@@ -918,6 +918,24 @@ section {
   color: var(--neon);
 }
 
+.cert-link {
+  display: inline-block;
+  margin-top: 0.4rem;
+  border: 1px solid var(--neon-dim);
+  background: rgba(0, 255, 65, 0.05);
+  padding: 0.45rem 1rem;
+  font-size: 0.84rem;
+  letter-spacing: 1px;
+  color: var(--white);
+  text-decoration: none;
+  transition: border-color 0.2s, box-shadow 0.2s, color 0.2s;
+}
+.cert-link:hover {
+  border-color: var(--neon);
+  color: var(--neon);
+  box-shadow: var(--shadow-neon-soft);
+}
+
 /* ---------------- contact ---------------- */
 .contact-grid {
   display: grid;

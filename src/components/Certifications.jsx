@@ -24,6 +24,14 @@ export default function Certifications() {
                 # technical certifications — development, AI/ML, cloud and
                 systems tracks — get listed here.
               </p>
+              <a
+                className="cert-link"
+                href="https://drive.google.com/drive/folders/14ZZ8luO0vtCH983yt0A9WnfoYIOZXPU6?usp=drive_link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                open --credentials ↗
+              </a>
             </div>
           </article>
 
@@ -43,6 +51,14 @@ export default function Certifications() {
                 # hackathons, events, workshops and extracurricular credentials
                 get listed here.
               </p>
+              <a
+                className="cert-link"
+                href="https://drive.google.com/drive/folders/1247sZgk3qeHQbZizofhJMw5iQJu9oleu?usp=drive_link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                open --credentials ↗
+              </a>
             </div>
           </article>
         </div>
