@@ -35,7 +35,7 @@ export default function Contact() {
               </a>
               <a
                 className="contact-line"
-                href="https://www.linkedin.com/in/4r1n0930"
+                href="https://www.linkedin.com/in/arin-gupta-547427326/"
                 target="_blank"
                 rel="noreferrer"
               >
