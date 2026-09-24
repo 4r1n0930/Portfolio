@@ -1,8 +1,11 @@
 import Navbar from "./components/Navbar.jsx";
+import IntroWelcome from "./components/IntroWelcome.jsx";
 import IdCard from "./components/IdCard.jsx";
 import Intro from "./components/Intro.jsx";
 import Projects from "./components/Projects.jsx";
+import Skills from "./components/Skills.jsx";
 import TechStack from "./components/TechStack.jsx";
+import Certifications from "./components/Certifications.jsx";
 import Contact from "./components/Contact.jsx";
 
 export default function App() {
@@ -10,10 +13,13 @@ export default function App() {
     <>
       <Navbar />
       <main>
+        <IntroWelcome />
         <IdCard />
         <Intro />
         <Projects />
+        <Skills />
         <TechStack />
+        <Certifications />
         <Contact />
       </main>
       <footer className="footer">

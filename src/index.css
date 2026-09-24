@@ -306,6 +306,86 @@ section {
   color: var(--neon);
 }
 
+/* ---------------- intro welcome / fullscreen ---------------- */
+.welcome {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem 1.4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.welcome::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 62% 46% at 50% 54%, rgba(0, 255, 65, 0.08), transparent 72%),
+    radial-gradient(circle at 50% 0%, rgba(0, 255, 65, 0.05), transparent 60%);
+}
+
+.welcome-inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.welcome-echo {
+  position: relative;
+  z-index: 1;
+  font-size: 0.78rem;
+  letter-spacing: 3px;
+  color: var(--muted);
+  margin-bottom: 1.6rem;
+}
+.welcome-echo .ok {
+  color: var(--neon);
+  text-shadow: var(--shadow-neon-soft);
+}
+
+.welcome-title {
+  font-family: var(--font-head);
+  font-weight: 900;
+  font-size: clamp(1.6rem, 6.5vw, 4.2rem);
+  letter-spacing: 3px;
+  line-height: 1.15;
+  color: var(--white);
+  text-shadow: var(--shadow-neon);
+  min-height: 1.2em;
+  word-break: break-word;
+}
+
+.scroll-hint {
+  position: absolute;
+  bottom: 2.4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.7rem;
+  letter-spacing: 4px;
+  color: var(--muted);
+  animation: bob 2.2s ease-in-out infinite;
+}
+
+.scroll-hint .chevron {
+  color: var(--neon);
+  text-shadow: var(--shadow-neon-soft);
+}
+
+@keyframes bob {
+  0%, 100% { transform: translate(-50%, 0); opacity: 0.5; }
+  50% { transform: translate(-50%, 6px); opacity: 1; }
+}
+
 /* ---------------- hero / ID card ---------------- */
 .hero {
   min-height: calc(100vh - 56px);
@@ -761,6 +841,83 @@ section {
   color: var(--white);
 }
 
+/* ---------------- skills ---------------- */
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.4rem;
+}
+
+.skill-cmd {
+  color: var(--muted);
+  font-size: 0.86rem;
+  margin-bottom: 1.1rem;
+}
+.skill-cmd::before {
+  content: "> ";
+  color: var(--neon);
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.skill-tag {
+  border: 1px solid var(--neon-dim);
+  background: rgba(0, 255, 65, 0.05);
+  padding: 0.4rem 0.9rem;
+  font-size: 0.86rem;
+  color: var(--white);
+  letter-spacing: 1px;
+  transition: border-color 0.2s, box-shadow 0.2s, color 0.2s;
+}
+.skill-tag:hover {
+  border-color: var(--neon);
+  color: var(--neon);
+  box-shadow: var(--shadow-neon-soft);
+}
+.skill-tag.soft {
+  border-style: dashed;
+  color: var(--muted);
+}
+.skill-tag.soft:hover {
+  color: var(--neon);
+}
+
+/* ---------------- certifications ---------------- */
+.cert-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.4rem;
+}
+
+.cert-name {
+  font-family: var(--font-head);
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--neon);
+  text-shadow: var(--shadow-neon-soft);
+  margin-bottom: 0.6rem;
+}
+.cert-key {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.cert-cmd {
+  color: var(--muted);
+  font-size: 0.84rem;
+  margin-bottom: 0.8rem;
+}
+.cert-cmd::before {
+  content: "> ";
+  color: var(--neon);
+}
+
 /* ---------------- contact ---------------- */
 .contact-grid {
   display: grid;
@@ -830,6 +987,10 @@ section {
   }
   .tech-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .skills-grid,
+  .cert-grid {
+    grid-template-columns: 1fr;
   }
   .contact-grid {
     grid-template-columns: 1fr;

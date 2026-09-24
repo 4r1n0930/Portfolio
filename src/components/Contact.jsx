@@ -33,6 +33,15 @@ export default function Contact() {
                 <span className="c-key">GITHUB</span>
                 <span className="c-val">github-4r1n</span>
               </a>
+              <a
+                className="contact-line"
+                href="https://www.linkedin.com/in/4r1n0930"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span className="c-key">LINKEDIN</span>
+                <span className="c-val">linkedin-4r1n</span>
+              </a>
             </div>
           </div>
 
